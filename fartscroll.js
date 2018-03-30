@@ -34,7 +34,7 @@ var fartscroll = (function () {
       ]
   };
 
-  return function (trigger_distance) {
+  return function (target, trigger_distance) {
     trigger_distance = trigger_distance || 400;
     var lastOffset;
 
@@ -54,7 +54,7 @@ var fartscroll = (function () {
       timer = setTimeout(function(){ playAudio(); }, 200);
     };
 
-    window.addEventListener('scroll', scrollFart, false);
+    target.addEventListener('scroll', scrollFart, false);
     window.addEventListener('resize', resizeFart, false);
   };
 
