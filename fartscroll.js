@@ -54,7 +54,7 @@ var fartscroll = (function () {
       timer = setTimeout(function(){ playAudio(); }, 200);
     };
 
-    target.addEventListener('scroll', scrollFart, false);
+    target.addEventListener('scroll', resizeFart, false);
     window.addEventListener('resize', resizeFart, false);
   };
 
